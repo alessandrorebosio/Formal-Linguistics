@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>100.0</x>
+			<y>110.0</y>
+			<label>all other cases</label>
+			<initial/>
+			<final/>
+		</state>
+		<state id="1" name="q1">
+			<x>350.0</x>
+			<y>110.0</y>
+			<label>end with b but not with bb</label>
+			<final/>
+		</state>
+		<state id="2" name="q2">
+			<x>600.0</x>
+			<y>110.0</y>
+			<label>tend with bb</label>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>b</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
+			<read>b</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>0</to>
+			<controlx>244</controlx>
+			<controly>242</controly>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>b</read>
+		</transition>
+	</automaton>
+</structure>
